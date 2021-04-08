@@ -1,3 +1,5 @@
+import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.*;
 
 
@@ -8,6 +10,7 @@ public class test_aeh_students {
     @Id
     @Column (name = "test_student_id")
     @GeneratedValue(generator = "incrementor")
+    @GenericGenerator(name = "incrementator", strategy = "increment")
     private int id;
 
     @Column (name = "name")
