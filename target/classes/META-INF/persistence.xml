@@ -11,13 +11,13 @@
             <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@//0.0.0.0:1521/ORCLCDB.localdomain"/>
             <property name="hibernate.connection.autocommit" value="false"/>
             <property name="javax.persistence.jdbc.user" value="MagKaur" />
-            <property name="javax.persistence.jdbc.password" value="" />
+            <property name="javax.persistence.jdbc.password" value="Aaa321" />
             <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle12cDialect"/>
             <property name="hibernate.connection.CharSet" value="utf8"/>
             <property name="hibernate.connection.characterEncoding" value="utf8"/>
             <property name="hibernate.connection.useUnicode" value="true"/>
             <property name="hibernate.show_sql" value="true"/>
-            <property name="hibernate.hbm2ddl.auto" value="create-drop" />
+
             <!-- use encache provider-->
             <!--<property name="hibernate.cache.region.factory_class"-->
             <!--value="org.hibernate.cache.ehcache.EhCacheRegionFactory"/>-->
