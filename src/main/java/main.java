@@ -1,10 +1,15 @@
 import javax.persistence.*;
+import java.util.Scanner;
 
 
 class integration_test {
 
     public static void main(String[] args){
 
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter numbers: ");
+        query searchname = new query(sc.nextLine());
+        searchname.getStudentVariable();
         //query get = new query();
         //get.getStudent();
 
