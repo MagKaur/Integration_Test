@@ -18,9 +18,9 @@ class integration_test {
 
         test_aeh_students test = new test_aeh_students();
 
-        test.setId(2);
-        test.setName("Jan");
-        test.setSurname("Kowalski");
+        test.setId(4);
+        test.setName("Joanna");
+        test.setSurname("Prajzendanc");
 
         EntityManager entityManager = entityManagerFactory.createEntityManager();
 
@@ -29,7 +29,7 @@ class integration_test {
         entityManager.merge(test);
         entityManager.getTransaction().commit();
 
-        entityManager.close();*/
-
+        entityManager.close();
+*/
     }
 }

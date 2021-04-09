@@ -12,11 +12,7 @@ public class test_aeh_students {
     @GeneratedValue(generator = "incrementor")
     @GenericGenerator(name = "incrementator", strategy = "increment")
     private int id;
-
-    @Column (name = "name")
     private String name;
-
-    @Column (name = "surname")
     private String surname;
 
 

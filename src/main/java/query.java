@@ -31,8 +31,13 @@ public class query {
         TypedQuery<test_aeh_students> query = m.createQuery(
                 "SELECT e FROM test_aeh_students e WHERE e.name = :searchedname" , test_aeh_students.class);
         test_aeh_students student = query.setParameter("searchedname", searchedname).getSingleResult();
-        System.out.println("Student" + student);
+        //System.out.println("Student" + student);
 
+            if (student.getName().equals(searchedname)){
+                System.out.println("Student id = "+student.getId());
+                System.out.println("Student Name = "+student.getName());
+                System.out.println("Student Surname = "+student.getSurname());
+            }
 
     }
 
