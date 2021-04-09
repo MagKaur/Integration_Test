@@ -7,13 +7,14 @@ class integration_test {
     public static void main(String[] args){
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter numbers: ");
+        System.out.println("Ener name: ");
         query searchname = new query(sc.nextLine());
-        searchname.getStudentVariable();
-        //query get = new query();
-        //get.getStudent();
 
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory ("Integration_Test");
+        //searchname.getStudent();
+        searchname.getStudentVariable();
+
+
+        /*EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory ("Integration_Test");
 
         test_aeh_students test = new test_aeh_students();
 
@@ -28,7 +29,7 @@ class integration_test {
         entityManager.merge(test);
         entityManager.getTransaction().commit();
 
-        entityManager.close();
+        entityManager.close();*/
 
     }
 }
