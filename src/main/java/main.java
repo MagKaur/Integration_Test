@@ -6,30 +6,20 @@ class integration_test {
 
     public static void main(String[] args){
 
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Ener name: ");
-        query searchname = new query(sc.nextLine());
 
-        //searchname.getStudent();
-        searchname.getStudentVariable();
+        //Searching for student by name
+        /*Scanner sc = new Scanner(System.in);
+        System.out.println("Enter name: ");
+        getStudent s = new getStudent(sc.nextLine());
+        s.getStudentVariable*/
+
+        //Adding student to database
+        Scanner a = new Scanner(System.in);
+        System.out.println("Enter name and surname: ");
+        addStudent add = new addStudent(a.nextLine());
+        add.assign();
+        add.addStudent();
 
 
-        /*EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory ("Integration_Test");
-
-        test_aeh_students test = new test_aeh_students();
-
-        test.setId(4);
-        test.setName("Joanna");
-        test.setSurname("Prajzendanc");
-
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
-
-        entityManager.getTransaction().begin();
-
-        entityManager.merge(test);
-        entityManager.getTransaction().commit();
-
-        entityManager.close();
-*/
     }
 }

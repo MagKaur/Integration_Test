@@ -1,11 +1,12 @@
 import javax.persistence.*;
 
 
-public class query {
+public class getStudent {
 
-    String newname;
+    private String newname;
 
-    public query(String text) {this.newname = text;}
+    public getStudent(String text) { this.newname = text; }
+
 
     @PersistenceUnit
     EntityManagerFactory em = Persistence.createEntityManagerFactory("Integration_Test");
@@ -20,7 +21,7 @@ public class query {
         System.out.println ("List of all customers: "+ query_result);
     }*/
 
-    //TODO wyświetlanie porządne wyniku - teraz bez ładnych odstępów
+
     //TODO Integration Test
     public void getStudentVariable (){
 
@@ -33,11 +34,10 @@ public class query {
         test_aeh_students student = query.setParameter("searchedname", searchedname).getSingleResult();
         //System.out.println("Student" + student);
 
-            if (student.getName().equals(searchedname)){
                 System.out.println("Student id = "+student.getId());
                 System.out.println("Student Name = "+student.getName());
                 System.out.println("Student Surname = "+student.getSurname());
-            }
+
 
     }
 

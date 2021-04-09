@@ -31,9 +31,7 @@ public class test_aeh_students {
         return surname;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+    public int setId() {return id;}
 
     public void setName(String name) {
         this.name = name;
@@ -42,12 +40,5 @@ public class test_aeh_students {
     public void setSurname(String surname) {
         this.surname = surname;
     }
-
-
-    @Override
-    public String toString() {
-        return "Student id: " + id + "name: " + name + "surname: " + surname;
-    }
-
 
 }
