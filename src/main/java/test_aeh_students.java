@@ -47,4 +47,11 @@ public class test_aeh_students {
         this.surname = surname;
     }
 
+
+    @Override
+    public String toString() {
+        return "Student id: " + id + "name: " + name + "surname: " + surname;
+    }
+
+
 }
