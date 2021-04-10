@@ -11,10 +11,10 @@ class integration_test {
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter name and surname: ");
-        String nazwaWpisana = scanner.nextLine();
-        service.przypiszDane(nazwaWpisana);
+        String insert = scanner.nextLine();
+        service.assignData(insert);
         //Adding student to database
-        service.addStudent();
+        //service.addStudent();
         service.getStudent();
     }
 }

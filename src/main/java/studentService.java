@@ -16,7 +16,7 @@ public class studentService implements Service {
         this.student = student;
     }
 
-    public void przypiszDane(String data)
+    public void assignData (String data)
     {
         splitData(data);
         //student.setId();
@@ -49,10 +49,10 @@ public class studentService implements Service {
     {
         EntityManager entityManager = em.createEntityManager();
         TypedQuery<test_aeh_students> query = entityManager.createQuery(
-                "SELECT e FROM test_aeh_students e WHERE e.name = :name" , test_aeh_students.class);
-        this.student = query.setParameter("name", name).getSingleResult();
-        wyswietlStudenta();
-        return student;
+                "SELECT e FROM test_aeh_students e WHERE e.name = :name AND e.surname = :surname" , test_aeh_students.class);
+        this.student = query.setParameter("name", name).setParameter("surname", surname).getSingleResult();
+        displayStudent();
+        return student ;
     }
 
     private void splitData(String data)
@@ -61,7 +61,7 @@ public class studentService implements Service {
         this.surname = data.split(" ")[1];
     }
 
-    public void wyswietlStudenta()
+    public void displayStudent()
     {
         System.out.println("Student id = "+student.getId());
         System.out.println("Student Name = "+student.getName());
