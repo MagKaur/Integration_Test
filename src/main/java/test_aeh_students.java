@@ -13,10 +13,8 @@ public class test_aeh_students {
     @GenericGenerator(name = "ISEQ$$_78013", strategy = "increment")
     private int id;
 
-    @Column (name = "NAME")
     private String name = "";
 
-    @Column (name = "SURNAME")
     private String surname = "";
 
     public test_aeh_students() {}

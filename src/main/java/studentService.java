@@ -36,7 +36,7 @@ public class studentService implements Service {
         }
         catch(Exception e)
         {
-            System.out.println("Dodawanie nie udało się... " + e);
+            System.out.println("Data insert failed.. " + e);
             temp = false;
         }
         finally {

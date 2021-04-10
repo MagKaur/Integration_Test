@@ -14,7 +14,7 @@ class integration_test {
         String insert = scanner.nextLine();
         service.assignData(insert);
         //Adding student to database
-        //service.addStudent();
-        service.getStudent();
+        service.addStudent();
+        //service.getStudent();
     }
 }
