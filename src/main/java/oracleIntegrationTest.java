@@ -20,8 +20,9 @@ public class oracleIntegrationTest {
     {
         String data = "Barbara Mrówka";
         service.assignData(data);
+        test_aeh_students test_student = service.getStudent();
         Assert.assertEquals(this.student.getName() + " " + this.student.getSurname() ,
-                service.getStudent().getName() + " " + service.getStudent().getSurname());
+                test_student.getName() + " " + test_student.getSurname());
     }
 
 }
