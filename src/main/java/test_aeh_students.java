@@ -14,11 +14,10 @@ public class test_aeh_students {
     private int id;
 
     @Column (name = "NAME")
-    private String name;
+    private String name = "";
 
     @Column (name = "SURNAME")
-    private String surname;
-
+    private String surname = "";
 
     public test_aeh_students() {}
 
@@ -35,7 +34,7 @@ public class test_aeh_students {
         return surname;
     }
 
-    public int setId() {return id;}
+    //public int setId(int id) {this.id = id;}
 
     public void setName(String name) {
         this.name = name;

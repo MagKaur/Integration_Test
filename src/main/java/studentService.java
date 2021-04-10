@@ -13,15 +13,19 @@ public class studentService implements Service {
 
     studentService(test_aeh_students student)
     {
-        student = student;
+        this.student = student;
     }
 
-    public void addStudent(String data)
+    public void przypiszDane(String data)
     {
         splitData(data);
-        student.setId();
-        student.setName(name);
-        student.setSurname(surname);
+        //student.setId();
+        this.student.setName(name);
+        this.student.setSurname(surname);
+    }
+
+    public void addStudent()
+    {
         EntityManager entityManager = em.createEntityManager();
         entityManager.getTransaction().begin();
         entityManager.merge(student);
@@ -29,20 +33,19 @@ public class studentService implements Service {
         entityManager.close();
     }
 
-    public void getStudent(String data)
+    public void getStudent()
     {
-        splitData(data);
         EntityManager entityManager = em.createEntityManager();
         TypedQuery<test_aeh_students> query = entityManager.createQuery(
                 "SELECT e FROM test_aeh_students e WHERE e.name = :name" , test_aeh_students.class);
-        student = query.setParameter("name", name).getSingleResult();
+        this.student = query.setParameter("name", name).getSingleResult();
         wyswietlStudenta();
     }
 
     private void splitData(String data)
     {
-        name = data.split(" ")[0];
-        surname = data.split(" ")[1];
+        this.name = data.split(" ")[0];
+        this.surname = data.split(" ")[1];
     }
 
     public void wyswietlStudenta()

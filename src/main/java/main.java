@@ -6,7 +6,8 @@ class integration_test {
 
     public static void main(String[] args){
 
-
+        test_aeh_students student = new test_aeh_students();
+        studentService service = new studentService(student);
         //Searching for student by name
         /*Scanner sc = new Scanner(System.in);
         System.out.println("Enter name: ");
@@ -14,11 +15,15 @@ class integration_test {
         s.getStudentVariable()*/
 
         //Adding student to database
-        Scanner a = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter name and surname: ");
-        addStudent add = new addStudent(a.nextLine());
-        add.assign();
-        add.addStudent();
+        String nazwaWpisana = scanner.nextLine();
+        service.przypiszDane(nazwaWpisana);
+        service.addStudent();
+
+        //addStudent add = new addStudent(a.nextLine());
+        //add.assign();
+        //add.addStudent();
 
 
     }
