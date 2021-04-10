@@ -11,7 +11,7 @@ class integration_test {
         /*Scanner sc = new Scanner(System.in);
         System.out.println("Enter name: ");
         getStudent s = new getStudent(sc.nextLine());
-        s.getStudentVariable*/
+        s.getStudentVariable()*/
 
         //Adding student to database
         Scanner a = new Scanner(System.in);
