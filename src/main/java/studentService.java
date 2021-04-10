@@ -24,22 +24,35 @@ public class studentService implements Service {
         this.student.setSurname(surname);
     }
 
-    public void addStudent()
+    public boolean addStudent()
     {
-        EntityManager entityManager = em.createEntityManager();
-        entityManager.getTransaction().begin();
-        entityManager.merge(student);
-        entityManager.getTransaction().commit();
-        entityManager.close();
+        boolean temp;
+        try{
+            EntityManager entityManager = em.createEntityManager();
+            entityManager.getTransaction().begin();
+            entityManager.merge(student);
+            entityManager.getTransaction().commit();
+            entityManager.close();
+        }
+        catch(Exception e)
+        {
+            System.out.println("Dodawanie nie udało się... " + e);
+            temp = false;
+        }
+        finally {
+            temp = true;
+        }
+        return temp;
     }
 
-    public void getStudent()
+    public test_aeh_students getStudent()
     {
         EntityManager entityManager = em.createEntityManager();
         TypedQuery<test_aeh_students> query = entityManager.createQuery(
                 "SELECT e FROM test_aeh_students e WHERE e.name = :name" , test_aeh_students.class);
         this.student = query.setParameter("name", name).getSingleResult();
         wyswietlStudenta();
+        return student;
     }
 
     private void splitData(String data)
