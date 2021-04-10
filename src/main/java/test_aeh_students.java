@@ -8,13 +8,16 @@ import javax.persistence.*;
 public class test_aeh_students {
 
     @Id
-    @Column (name = "test_student_id")
-    @GeneratedValue(generator = "incrementor")
-    @GenericGenerator(name = "incrementator", strategy = "increment")
+    @Column (name = "TEST_STUDENT_ID")
+    @GeneratedValue(generator = "ISEQ$$_78013")
+    @GenericGenerator(name = "ISEQ$$_78013", strategy = "increment")
     private int id;
-    private String name;
-    private String surname;
 
+    @Column (name = "NAME")
+    private String name = "";
+
+    @Column (name = "SURNAME")
+    private String surname = "";
 
     public test_aeh_students() {}
 
@@ -31,7 +34,7 @@ public class test_aeh_students {
         return surname;
     }
 
-    public int setId() {return id;}
+    //public int setId(int id) {this.id = id;}
 
     public void setName(String name) {
         this.name = name;
